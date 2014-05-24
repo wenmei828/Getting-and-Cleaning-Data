@@ -1,25 +1,18 @@
-## Getting and Cleaning Data Project
-* Unzip the source
-  ( https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip )
+getting_and_cleaning_data_assignment
+====================================
 
-  into a folder on your local drive, say C:\Users\yourname\Documents\R\
+Repository for the assignment of Coursera lectures Getting and Cleaning Data.
 
-* Put run_analysis.R to  C:\Users\yourname\Documents\R\UCI HAR Dataset\
+# Instruction on how to run the scripts
 
-* in RStudio: setwd("C:\\\\Users\\\\yourname\\\\Documents\\\\R\\\\UCI HAR Dataset\\\\")
+1. Download and unzip the file in your working directory:
+   [Link to data set](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
+   
+   It is the same link as the one provided in the assignment webpage.
 
-  and then: source("run_analysis.R")
+2. Download the *run\_analysis.R* file in your working directory and run it in any R command shell or Rstudio session.
 
-* The latter will run the R script, it will read the dataset and write these files:
+3. It should create a csv file called *tidy\_SamsungDS\_Coursera.csv* in your working directory. This is the tidy data set that the assignment required the student to create.
 
-  merged_clean_data.txt  -- 8.35 Mb, a 10299x68 data frame
-
-  data_set_with_the_averages.txt  -- 0.225 Mb, a 180x68 data frame
-
-  The script normally runs for ~30 seconds, but the exact number depends on your system.
-
-* Use data <- read.table("data_set_with_the_averages.txt") to read the latter.
-  It is 180x68 because there are 30 subjects and 6 activities,
-  thus "for each activity and each subject" means 30*6=180 rows.
-  Note that the provided R script has no assumptions on numbers of records,
-  only on locations of files.
+# Note
+You will probably be required to load/install the *plyr* package.
